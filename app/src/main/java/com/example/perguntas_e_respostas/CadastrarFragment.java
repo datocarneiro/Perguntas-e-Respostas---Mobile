@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Fragment_Pergunta#newInstance} factory method to
+ * Use the {@link CadastrarFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Fragment_Pergunta extends Fragment {
+public class CadastrarFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class Fragment_Pergunta extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Fragment_Pergunta() {
+    public CadastrarFragment() {
         // Required empty public constructor
     }
 
@@ -34,11 +34,11 @@ public class Fragment_Pergunta extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment_Pergunta.
+     * @return A new instance of fragment CadastrarFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static Fragment_Pergunta newInstance(String param1, String param2) {
-        Fragment_Pergunta fragment = new Fragment_Pergunta();
+    public static CadastrarFragment newInstance(String param1, String param2) {
+        CadastrarFragment fragment = new CadastrarFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +59,6 @@ public class Fragment_Pergunta extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment__pergunta, container, false);
+        return inflater.inflate(R.layout.fragment_cadastrar, container, false);
     }
 }

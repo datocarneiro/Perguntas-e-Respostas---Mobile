@@ -1,0 +1,77 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".CadastrarFragment">
+
+    <TextView
+        android:id="@+id/IdTituloPergunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Qual é a pergunta?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02" />
+
+    <EditText
+        android:id="@+id/IdInputPergunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a pergunta..."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdTituloPergunta"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <TextView
+        android:id="@+id/IdTituloResposta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Qual é a resposta?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdInputPergunta"
+        app:layout_constraintVertical_bias="0.02"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/IdInputResposta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a resposta..."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdTituloResposta"
+        app:layout_constraintVertical_bias="0.016"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/IdButtonJogar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:drawableRight="@android:drawable/ic_media_play"
+        android:text="Jogar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdInputResposta"
+        app:layout_constraintVertical_bias="0.845" />
+
+    <Button
+        android:id="@+id/IdButtonRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/IdButtonJogar"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdInputResposta"
+        app:layout_constraintVertical_bias="0.846" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
