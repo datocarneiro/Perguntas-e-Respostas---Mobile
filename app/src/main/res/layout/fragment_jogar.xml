@@ -10,7 +10,7 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/IdPerguntaJogar"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:text="Pergunta"
@@ -23,7 +23,7 @@
 
     <TextView
 
-        android:id="@+id/textView2"
+        android:id="@+id/IdRespostaJogar"
         android:layout_width="match_parent"
         android:layout_height="113dp"
         android:text="Resposta"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/IdPerguntaJogar"
         app:layout_constraintVertical_bias="0.049" />
 
     <LinearLayout
@@ -39,13 +39,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/IdButtonCadastrarJogar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/IdRespostaJogar"
         app:layout_constraintVertical_bias="0.89">
 
         <Button
+            android:id="@+id/IdButtonRespostaJogar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Resposta"
@@ -53,6 +54,7 @@
             tools:layout_editor_absoluteY="535dp" />
 
         <Button
+            android:id="@+id/IdButtonPularJogar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pular"
@@ -61,11 +63,11 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/IdButtonCadastrarJogar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cadastrar Pergunta"
-        tools:layout_editor_absoluteX="105dp"
+        android:text="Cadastrar pergunta e resposta"
+        tools:layout_editor_absoluteX="70dp"
         tools:layout_editor_absoluteY="605dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
