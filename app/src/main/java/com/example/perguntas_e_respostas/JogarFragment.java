@@ -1,5 +1,6 @@
 package com.example.perguntas_e_respostas;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,15 +11,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link JogarFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class JogarFragment extends Fragment {
 
     Button mButtonCadastrarPR;
+    Button mButtonPular;
 
     public JogarFragment() {
         // Required empty public constructor
@@ -41,11 +40,19 @@ public class JogarFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         mButtonCadastrarPR = getActivity().findViewById(R.id.IdButtonCadastrarJogar);
+        mButtonPular = getActivity().findViewById(R.id.IdButtonPularJogar);
 
         mButtonCadastrarPR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new CadastrarFragment()).commit();
+            }
+        });
+
+        mButtonPular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "botão Pular CLICADO", Toast.LENGTH_SHORT).show();
             }
         });
 

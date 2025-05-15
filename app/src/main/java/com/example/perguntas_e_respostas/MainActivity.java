@@ -23,11 +23,14 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+
         JogarFragment fragment = new JogarFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout,fragment).commit();
 
+//        /* o trecho acima é basicamente o mesmo trecho abaixo , só que acima ele esta mais desmembrado em variaveis*/
+//        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new JogarFragment()).commit();
 
     }
 }
