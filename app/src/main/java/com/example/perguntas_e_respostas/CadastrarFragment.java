@@ -1,6 +1,7 @@
 package com.example.perguntas_e_respostas;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,10 +12,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.perguntas_e_respostas.BancoDeDados;
+import com.example.perguntas_e_respostas.Questao;
+import com.example.perguntas_e_respostas.MeuDao;
+
+
 
 public class CadastrarFragment extends Fragment {
 
-    EditText mInpuyPergunta;
+    EditText mInputPergunta;
     EditText mInputResposta;
     Button mButtonRegistrar;
     Button mButtonJogar;
@@ -41,7 +49,7 @@ public class CadastrarFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mInpuyPergunta = getActivity().findViewById(R.id.IdInputPergunta);
+        mInputPergunta = getActivity().findViewById(R.id.IdInputPergunta);
         mInputResposta = getActivity().findViewById(R.id.IdInputResposta);
         mButtonRegistrar = getActivity().findViewById(R.id.IdButtonRegistrar);
         mButtonJogar = getActivity().findViewById(R.id.IdButtonJogar);
@@ -50,6 +58,29 @@ public class CadastrarFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new JogarFragment()).commit();
+            }
+        });
+        mButtonRegistrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String pergunta = mInputPergunta.getText().toString();
+                String resposta = mInputResposta.getText().toString();
+
+                Log.d("pergunta::::%s",  pergunta);
+                Log.d("resposta::::%s", resposta);
+                Log.d( "TAG", "PASOUUUUUU inputss");
+
+                if (!pergunta.isEmpty() && !resposta.isEmpty()){
+                    Questao questao = new Questao(pergunta, resposta);
+
+                    BancoDeDados.getBancoDeDados(getActivity()).meuDao().inserirQuestao(questao);
+
+                    mInputResposta.setText("");
+                    mInputPergunta.setText("");
+
+                    Toast.makeText(getActivity(), "Inserido com sucesso!", Toast.LENGTH_SHORT).show();
+
+                }
             }
         });
     }
