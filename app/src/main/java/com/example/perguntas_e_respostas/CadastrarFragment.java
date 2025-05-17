@@ -83,5 +83,7 @@ public class CadastrarFragment extends Fragment {
                 }
             }
         });
+
+
     }
 }

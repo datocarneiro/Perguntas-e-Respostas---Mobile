@@ -18,5 +18,7 @@ public interface MeuDao {
     @Query("SELECT * FROM Questao")
     List<Questao> pesquisarTodasQuatoes();
 
+    @Query("SELECT * FROM questao ORDER BY RANDOM() LIMIT 1")
+    Questao pegarPerguntaAleatoria();
 
 };

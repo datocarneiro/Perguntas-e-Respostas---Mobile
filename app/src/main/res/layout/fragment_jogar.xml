@@ -12,8 +12,10 @@
     <TextView
         android:id="@+id/IdPerguntaJogar"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:text="Pergunta"
+        android:textSize="20dp"
+        android:background="#C4DFED"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -22,20 +24,22 @@
         app:layout_constraintVertical_bias="0.026" />
 
     <TextView
-
         android:id="@+id/IdRespostaJogar"
         android:layout_width="match_parent"
-        android:layout_height="113dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#F0E2DA"
         android:text="Resposta"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/IdPerguntaJogar"
-        app:layout_constraintVertical_bias="0.055" />
+        app:layout_constraintVertical_bias="0.004" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="5dp"
@@ -47,30 +51,29 @@
 
         <Button
             android:id="@+id/IdButtonRespostaJogar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Resposta"
-
-            tools:layout_editor_absoluteX="28dp"
-            tools:layout_editor_absoluteY="535dp" />
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Resposta" />
 
         <Button
             android:id="@+id/IdButtonPularJogar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pular"
-            tools:layout_editor_absoluteX="221dp"
-            tools:layout_editor_absoluteY="535dp" />
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Pular" />
     </LinearLayout>
+
 
     <Button
         android:id="@+id/IdButtonCadastrarJogar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_height="48dp"
+        android:minWidth="200dp"
+        android:layout_marginBottom="32dp"
         android:text="Cadastrar pergunta e resposta"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
